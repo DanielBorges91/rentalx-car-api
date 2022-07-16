@@ -1,11 +1,11 @@
 interface User {
   name: string;
-  duration: number;
+  duration?: number;
   educator: string;
 }
 
 class CreateCourseService {
-  execute({ name, duration, educator }: User) {
+  execute({ name, duration = 8, educator }: User) {
     console.log(name, duration, educator);
   }
 }
